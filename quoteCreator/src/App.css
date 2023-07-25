@@ -1,0 +1,172 @@
+
+main{
+  display :flex;
+  flex-direction :column ;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div {
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  align-items: flex;
+  position: relative;
+  width:100vw;
+  /* Asegura que el contenedor ocupe todo el ancho disponible */
+  height: 100vh; /* Ajusta la altura del contenedor al 100% del viewport */
+  background-repeat: repeat;
+
+}
+
+.container::before {
+  content: ''; /* Necesario para que aparezca la pseudo-elemento ::before */
+  position: absolute; /* Posiciona el pseudo-elemento por encima del contenido */
+  width: 100vw;
+  height: 100%;
+  background-image: url('https://static-00.iconduck.com/assets.00/cat-face-emoji-512x455-gda5rvrc.png'); /* Ruta de la imagen de gatitos */
+  background-size: 10%;
+  opacity: 0.4; /* Opacidad del emoji de gatitos (40%) */
+  z-index: -1; /* Coloca la capa del emoji detrás del contenido */
+  pointer-events: none; /* Evita que el pseudo-elemento afecte a los eventos del contenido */
+}
+
+
+h1{
+  color: #fff; 
+  text-align: center;
+  font-family:Impact;
+  margin-bottom: 100px;
+}
+
+body {
+  color: #333;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+}
+.footer a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+#quote-box {
+  border-radius: 6px;
+  position: relative;
+  align-self:center;
+  width: 450px;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+  margin : 0 auto;
+  margin-top: 100px;
+ 
+}
+#quote-box .quote-text {
+  text-align: center;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+#quote-box .quote-text i {
+  font-size: 1em;
+  margin-right: 0.4em;
+}
+#quote-box .quote-author {
+  width: 450px;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1em;
+  text-align: right;
+}
+#quote-box .buttons {
+  width: 450px;
+  margin: auto;
+  display: block;
+ 
+}
+
+#quote-box .buttons .button {
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+#quote-box .buttons .button:hover {
+  opacity: 0.6;
+}
+
+#quote-box .buttons .button#tweet-quote
+ {
+  float: left;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: auto;
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+}
+#quote-box .buttons .button#new-quote {
+  float: right;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+.fade-in {
+  opacity: 0; /* Comenzar con opacidad 0 para que el elemento esté oculto */
+  animation: fadeInAnimation 3s ease forwards; /* Definir la animación fadeInAnimation */
+}
+
+/* Clase para animar la desaparición del elemento (fade-out) */
+.fade-out {
+  opacity: 1; /* Comenzar con opacidad 1 para que el elemento esté visible */
+  animation: fadeOutAnimation 3s ease forwards; /* Definir la animación fadeOutAnimation */
+}
+
+/* Definir la animación de aparición (fadeInAnimation) */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Opacidad inicial 0 al inicio de la animación */
+  }
+  to {
+    opacity: 1; /* Opacidad final 1 al final de la animación */
+  }
+}
+
+/* Definir la animación de desaparición (fadeOutAnimation) */
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1; /* Opacidad inicial 1 al inicio de la animación */
+  }
+  to {
+    opacity: 0; /* Opacidad final 0 al final de la animación */
+  }
+}
+
